@@ -31,7 +31,7 @@ void get_current_position(float &ox, float &oy, float t, int p){
     // p = [0, 3] int
     float cx = center_start_x + t * (center_end_x - center_start_x);
     float cy = center_start_y + t * (center_end_y - center_start_y);
-    float cr = radius_start + t * (radius_start - radius_end);
+    float cr = radius_start + t * (radius_end - radius_start);
     ox = cx + (dx[p] * x_multiplier) * cr;
     oy = cy + (dy[p] * y_multiplier) * cr;
 }
